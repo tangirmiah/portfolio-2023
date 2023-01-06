@@ -1,9 +1,31 @@
 {
+  "plugins": [
+    "unused-imports",
+    "@typescript-eslint"
+  ],
   "extends": [
     "next/core-web-vitals",
     "eslint:recommended"
   ],
   "rules": {
-    "indent": []
+    "indent": [
+      "error",
+      2
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ]
   }
 }
